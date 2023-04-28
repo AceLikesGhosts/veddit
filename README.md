@@ -28,7 +28,7 @@ fn main() {
 ```
 
 ### roadmap:
-- [ ] subreddit about // this would be easy to make, im just lazy. soon.
+- [x] subreddit about
 - [x] subreddit posts
 - [x] user posts
 - [x] user about
