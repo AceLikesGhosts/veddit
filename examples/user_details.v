@@ -3,7 +3,7 @@ module main
 import veddit
 
 fn main() {
-	user := veddit.user('acelikesaudio') or {
+	user := veddit.about_user('acelikesaudio') or {
 		println('${err}')
 		return
 	}

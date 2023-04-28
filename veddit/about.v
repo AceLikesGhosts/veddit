@@ -135,6 +135,11 @@ struct Subreddit_CommentContributionSettings {
 	allowed_media_types []string
 }
 
+[deprecated: 'Please use `about_user`, it is the exact same, just a naming convention change to support `about_subreddit`.']
+	[deprecated_after: '2023-04-28']
+pub fn user(name string) !User {
+	return about_subreddit(name)
+}
 
 // about_user fetches a user from reddit, it pulls their /about.json and parses it into a V struct
 pub fn about_user(name string) !User {
