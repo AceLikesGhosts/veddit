@@ -8,6 +8,6 @@ fn test_about_user() {
 	mut resp := get('https://reddit.com/user/admin/about.json')!
 	our_user := json.decode(User, resp.body)!
 
-	mut fetched_suer := about_user("admin")!
+	mut fetched_suer := about_user('admin')!
 	assert our_user == fetched_suer
 }

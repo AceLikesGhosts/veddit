@@ -21,7 +21,6 @@ pub fn subreddit_posts_a(name string, sort string) !Posts {
 	return generic_posts('https://reddit.com/r/', name, sort, 25, '', '')
 }
 
-
 // Wrapper for the base <code>generic_posts</code> function, that allows for passing less parameters.
 // Defaults to no after.
 pub fn subreddit_posts_b(name string, sort string, limit int) !Posts {
