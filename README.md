@@ -9,7 +9,7 @@ logging a user's about details is also very easy, and can be seen here:
 ```v
 module main
 
-import veddit
+import acelikesghosts.veddit
 
 fn main() {
     about := veddit.user('acelikesaudio')!
