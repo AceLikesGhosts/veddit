@@ -12,7 +12,7 @@ module main
 import acelikesghosts.veddit
 
 fn main() {
-    about := veddit.user('acelikesaudio')!
+    about := veddit.about_user('acelikesaudio')!
     // about.whatever
     println('id: ${about.data.id}')
 
