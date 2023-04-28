@@ -15,18 +15,15 @@ pub fn user_posts_c(name string, limit int, after string) !Posts {
 	return generic_posts('https://reddit.com/user/', name, '', limit, after, '')
 }
 
-/**
-* Wrapper for the base <code>generic_posts</code> function, that allows for passing less parameters.
-* Defaults to 25 limit, with no after.
-*/
+// Wrapper for the base <code>generic_posts</code> function, that allows for passing less parameters.
+// Defaults to 25 limit, with no after.
 pub fn subreddit_posts_a(name string, sort string) !Posts {
 	return generic_posts('https://reddit.com/r/', name, sort, 25, '', '')
 }
 
-/**
-* Wrapper for the base <code>generic_posts</code> function, that allows for passing less parameters.
-* Defaults to no after.
-*/
+
+// Wrapper for the base <code>generic_posts</code> function, that allows for passing less parameters.
+// Defaults to no after.
 pub fn subreddit_posts_b(name string, sort string, limit int) !Posts {
 	if limit > 100 {
 		return error("Reddit only allows for pulling 100 posts (limit),
@@ -36,18 +33,14 @@ pub fn subreddit_posts_b(name string, sort string, limit int) !Posts {
 	return generic_posts('https://reddit.com/r/', name, sort, limit, '', '')
 }
 
-/**
-* Wrapper for the base <code>generic_posts</code> function, that allows for passing less parameters.
-* Defaults to no before.
-*/
+// Wrapper for the base <code>generic_posts</code> function, that allows for passing less parameters.
+// Defaults to no before.
 pub fn subreddit_posts_c(name string, sort string, limit int, after string) !Posts {
 	return generic_posts('https://reddit.com/r/', name, sort, limit, after, '')
 }
 
-/**
-* Fetches data from either a subreddit or user page with the name, sort (type), limit, and after.
-* After allows for paging, and pulling more data.
-*/
+// Fetches data from either a subreddit or user page with the name, sort (type), limit, and after.
+// After allows for paging, and pulling more data.
 pub fn generic_posts(url string, name string, sort string, limit int, after string, before string) !Posts {
 	if limit > 100 {
 		return error("Reddit only allows for pulling 100 posts (limit),
