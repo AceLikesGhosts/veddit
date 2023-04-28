@@ -1,6 +1,11 @@
 # veddit
 > a simplistic reddit wrapper for V
 
+### installation
+this project is listed on [vpm](https://vpm.vlang.io) meaning you are able to pull it into
+your workspace by simply running `v install acelikesghosts.veddit`, or you can add it
+into your `v.mod` file if you'd like it to be project specific
+
 ### usage:
 a few simplistic applications can be found in [the examples folder](./examples),
 
