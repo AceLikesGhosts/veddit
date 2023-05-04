@@ -85,7 +85,7 @@ pub:
 	name                          string
 	// notification_level string -> TODO: no subreddits ive tested have this set to a value
 	original_content_tag_enabled           bool
-	over_18                                 bool
+	over_18                                bool
 	prediction_leaderboard_entry_type      string
 	primary_color                          string
 	public_description                     string
