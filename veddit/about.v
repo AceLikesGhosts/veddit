@@ -94,7 +94,7 @@ pub:
 	quarantine                             bool
 	restrict_commenting                    bool
 	restrict_posting                       bool
-	should_achrive_posts                   bool
+	should_archive_posts                   bool
 	should_show_media_in_comments_settings bool
 	show_media                             bool
 	show_media_preview                     bool
