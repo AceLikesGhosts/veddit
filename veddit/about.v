@@ -81,7 +81,7 @@ pub:
 	lang                          string
 	link_flair_enabled            bool
 	link_flair_position           string
-	mobile_banner_iamge           string
+	mobile_banner_image           string
 	name                          string
 	// notification_level string -> TODO: no subreddits ive tested have this set to a value
 	original_content_tag_enabled           bool
