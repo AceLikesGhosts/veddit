@@ -21,6 +21,6 @@ fn test_about_user() {
 	assert fetched_user.data.is_gold == true
 
 	assert fetched_user.data.accept_chats == false
-	assert fetched_user.data.accept_pms == true
+	assert fetched_user.data.accept_pms == false
 	assert fetched_user.data.accept_followers == true
 }
