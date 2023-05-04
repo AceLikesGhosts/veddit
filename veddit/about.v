@@ -134,6 +134,7 @@ pub:
 }
 
 struct Subreddit_CommentContributionSettings {
+pub:
 	allowed_media_types []string
 }
 
