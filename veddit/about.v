@@ -36,7 +36,7 @@ pub:
 	allow_chat_post_creation      bool
 	allow_discovery               bool
 	allow_galleries               bool
-	allow_iamges                  bool
+	allow_images                  bool
 	allow_polls                   bool
 	allow_prediction_contributors bool
 	allow_predictions_tournament  bool
