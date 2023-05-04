@@ -10,7 +10,7 @@ into your `v.mod` file if you'd like it to be project specific
 a few simplistic applications can be found in [the examples folder](./examples),
 
 
-logging a user's about details is also very easy, and can be seen here:
+logging a user's about details is very easy, and can be seen here:
 ```v
 module main
 
