@@ -10,4 +10,7 @@ fn test_about_user() {
 
 	mut fetched_suer := about_user('admin')!
 	assert our_user == fetched_suer
+
+	assert fetched_suer.kind == 't2' // t2 means its a user
+	assert fetched_suer.data.is_employee == false
 }
