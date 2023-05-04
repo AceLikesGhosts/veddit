@@ -4,7 +4,7 @@ import net.http { get }
 import json
 
 pub fn about_subreddit(name string) !AboutSubreddit {
-	valid_str('name', name) or { err }
+	valid_str('name', name)!
 
 	mut resp := get('https://reddit.com/r/${name}/about.json') or {
 		return error('Failed to get subreddit
@@ -145,7 +145,7 @@ pub fn user(name string) !User {
 
 // about_user fetches a user from reddit, it pulls their /about.json and parses it into a V struct
 pub fn about_user(name string) !User {
-	valid_str('name', name) or { err }
+	valid_str('name', name)!
 
 	mut resp := get('https://reddit.com/user/${name}/about.json') or {
 		return error('Failed to get user
