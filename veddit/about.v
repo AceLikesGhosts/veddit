@@ -202,7 +202,7 @@ pub:
 	in_redesign_beta          bool
 	inbox_count               int
 	is_blocked                bool
-	is_employee               int
+	is_employee               bool
 	is_friend                 bool
 	is_gold                   bool
 	is_mod                    bool
