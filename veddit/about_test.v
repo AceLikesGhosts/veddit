@@ -8,7 +8,7 @@ fn test_about_user() {
 	mut resp := get('https://reddit.com/user/reddit/about.json')!
 	our_user := json.decode(User, resp.body)!
 
-	mut fetched_user := about_user('admin')!
+	mut fetched_user := about_user('reddit')!
 	assert our_user == fetched_user
 
 	assert fetched_user.kind == 't2' // t2 means its a user
