@@ -4,6 +4,8 @@ import net.http { get }
 import json
 
 pub fn about_subreddit(name string) !AboutSubreddit {
+	valid_str('name', name) or { err }
+
 	mut resp := get('https://reddit.com/r/${name}/about.json') or {
 		return error('Failed to get subreddit
 		(${name})\'s information (https://reddit.com/r/${name}/about.json).
@@ -143,6 +145,8 @@ pub fn user(name string) !User {
 
 // about_user fetches a user from reddit, it pulls their /about.json and parses it into a V struct
 pub fn about_user(name string) !User {
+	valid_str('name', name) or { err }
+
 	mut resp := get('https://reddit.com/user/${name}/about.json') or {
 		return error('Failed to get user
 		(${name})\'s information (https://reddit.com/user/${name}/about.json).
@@ -224,7 +228,7 @@ pub:
 	pref_video_autoplay       bool
 	snoovatar_img             string
 	snoovatar_size            []int
-	// subreddit -> im not typing this. fuck nested data
+	// subreddit -> idk
 	suspension_expiration_utc int
 	total_karma               int
 	verified                  bool

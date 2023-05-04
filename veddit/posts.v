@@ -41,6 +41,16 @@ pub fn subreddit_posts_c(name string, sort string, limit int, after string) !Pos
 // Fetches data from either a subreddit or user page with the name, sort (type), limit, and after.
 // After allows for paging, and pulling more data.
 pub fn generic_posts(url string, name string, sort string, limit int, after string, before string) !Posts {
+	valid_str('url', url) or { err }
+	valid_str('name', name) or { err }
+	valid_str('sort', sort) or { err }
+	valid_str('after', after) or { err }
+	valid_str('before', before) or { err }
+
+	if limit < 1 {
+		return error('Cannot limit to less than 1 post.')
+	}
+
 	if limit > 100 {
 		return error("Reddit only allows for pulling 100 posts (limit),
 		for more options try using 'after' with the last post ID.")
