@@ -41,6 +41,10 @@ pub fn subreddit_posts_c(name string, sort string, limit int, after string) !Pos
 // Fetches data from either a subreddit or user page with the name, sort (type), limit, and after.
 // After allows for paging, and pulling more data.
 pub fn generic_posts(url string, name string, sort string, limit int, after string, before string) !Posts {
+	if !url.starts_with('https://reddit.com/') {
+		return error('URL link passed to `generic_posts` must start with `https://reddit.com/`')
+	}
+
 	valid_str('url', url)!
 	valid_str('name', name)!
 	valid_str('sort', sort)!
