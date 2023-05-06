@@ -21,7 +21,7 @@ pub fn about_subreddit(name string) !AboutSubreddit {
 
 struct AboutSubreddit {
 pub:
-	kind string
+	kind Kind
 	data AboutSubredditData
 }
 
@@ -163,7 +163,7 @@ pub fn about_user(name string) !User {
 
 struct User {
 pub:
-	kind string
+	kind Kind
 	data UserData
 }
 

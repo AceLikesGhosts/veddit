@@ -80,7 +80,7 @@ pub fn (posts &Posts) is_empty() bool {
 struct Posts {
 pub:
 	data PostData
-	kind string
+	kind Kind
 }
 
 struct PostData {
@@ -96,7 +96,7 @@ pub:
 struct PostChildren {
 pub:
 	data PostChild
-	kind string
+	kind Kind
 }
 
 struct PostChild {
