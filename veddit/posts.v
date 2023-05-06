@@ -62,7 +62,7 @@ pub fn generic_posts(url string, name string, sort string, limit int, after stri
 
 	sort_lower := sort.to_lower()
 	mut resp := get('${url}${name}/${sort}.json?after=${after}&limit=${limit}&before=${before}') or {
-		return error('Failed to get subreddit ${name} (https://reddit.com/r/${name}/${sort_lower}.json?limit=${limit}&after=${after}&before=${before}).\nOriginal: ${err}')
+		return error('Failed to get subreddit ${name} (${url}${name}/${sort_lower}.json?limit=${limit}&after=${after}&before=${before}).\nOriginal: ${err}')
 	}
 
 	return json.decode(Posts, resp.body)
