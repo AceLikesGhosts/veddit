@@ -11,7 +11,7 @@ fn test_about_user() {
 	mut fetched_user := about_user('reddit')!
 	assert our_user == fetched_user
 
-	assert fetched_user.kind == 't2' // t2 means its a user
+	assert fetched_user.kind == Kind.t2 // t2 means its a user
 
 	assert fetched_user.data.created_utc == 1134104400
 	assert fetched_user.data.created == 1134104400
