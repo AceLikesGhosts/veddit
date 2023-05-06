@@ -26,5 +26,5 @@ for file in files:
 
     for index, line in enumerate(sc):
         if 'TODO' in line:
-            github = repo + file + '#L' + str(index + 1)
+            github = repo + file.replace('\\', '/') + '#L' + str(index + 1)
             out_file.write(f'* [{file}({index+1})]({github})\n`{line}`\n')
