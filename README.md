@@ -1,6 +1,8 @@
 # veddit
 > a simplistic reddit wrapper for V
 
+**WARNING:** At the moment, this library only can get data from Reddit's JSON APIs for Posts, and About data.
+
 ### installation
 this project is listed on [vpm](https://vpm.vlang.io) meaning you are able to pull it into
 your workspace by simply running `v install acelikesghosts.veddit`, or you can add it
