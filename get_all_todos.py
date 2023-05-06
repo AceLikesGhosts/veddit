@@ -1,6 +1,5 @@
 import pathlib
 import glob
-import re
 
 files = glob.glob('veddit/*')
 repo = 'https://github.com/acelikesghosts/veddit/blob/master/'
