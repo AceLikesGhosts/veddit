@@ -1,20 +1,9 @@
 ---
 name: vvv compile format
-'on':
+on:
   pull_request:
-    branches:
-      - master
-      - main
-      - muncho
-    paths:
-      - '**.v'
   push:
-    branches:
-      - master
-      - main
-      - muncho
-    paths:
-      - '**.v'
+    
 jobs:
   format:
     runs-on: ubuntu-latest
@@ -41,4 +30,4 @@ jobs:
       - name: 'v prod build'
         run: |
           cd ${{ github.event.repository.name }}
-          ../v -prod .
+          ../v -prod . 
