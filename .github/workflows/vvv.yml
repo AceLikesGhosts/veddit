@@ -1,0 +1,44 @@
+---
+name: vvv compile format
+'on':
+  pull_request:
+    branches:
+      - master
+      - main
+      - muncho
+    paths:
+      - '**.v'
+  push:
+    branches:
+      - master
+      - main
+      - muncho
+    paths:
+      - '**.v'
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: vlang/v
+      - uses: actions/checkout@v3
+      - name: 'compile V'
+        run: 'make'
+      - name: 'v format'
+        run: |
+          cd ${{ github.event.repository.name }}
+          ../v format -verify .
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: vlang/v
+      - uses: actions/checkout@v3
+      - name: 'compile V'
+        run: 'make'
+      - name: 'v prod build'
+        run: |
+          cd ${{ github.event.repository.name }}
+          ../v -prod .
