@@ -13,7 +13,7 @@ jobs:
           repository: vlang/v
       - uses: actions/checkout@v3
         with:
-          repository: ${{ github.event.repository.name }}
+          repository: ${GITHUB_REPOSITORY}
       - name: 'compile V'
         run: 'make'
       - name: 'v format'
@@ -28,7 +28,7 @@ jobs:
           repository: vlang/v
       - uses: actions/checkout@v3
         with:
-          repository: ${{ github.event.repository.name }}
+          repository: ${GITHUB_REPOSITORY}
       - name: 'compile V'
         run: 'make'
       - name: 'v prod build'
