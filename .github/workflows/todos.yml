@@ -14,7 +14,7 @@ jobs:
           REF: ${{ github.ref }}
           LABEL: "todo"
           MIN_WORDS: 1
-          MIN_CHARACTERS: 40
+          MIN_CHARACTERS: 1
           ADD_LIMIT: 1
           CLOSE_LIMIT: 1
           PROJECT_COLUMN_ID: 824533
