@@ -17,4 +17,4 @@ jobs:
           ADD_LIMIT: 0
           CLOSE_LIMIT: 0
           INCLUDE_PATTERN: "\\.v$"
-          COMMENT_ON_ISSUES: 1
+          COMMENT_ON_ISSUES: 1 
