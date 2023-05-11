@@ -109,8 +109,7 @@ pub:
 	author                        string
 	author_flair_background_color string
 	author_flair_css_class        string
-	// TODO: find type
-	// author_flair_richtext         string
+	author_flair_richtext         string
 	author_flair_template_id string
 	author_flair_text        string
 	author_flair_text_color  string
@@ -132,7 +131,7 @@ pub:
 	// TODO: find type
 	// discussion_type               string
 	// TODO: find type
-	// distinguished                 map[string]string
+	distinguished                 string
 	domain string // what?
 	downs  int
 	edited bool
@@ -150,12 +149,10 @@ pub:
 	is_robot_indexable     bool
 	is_self                bool
 	is_video               bool
-	// TODO: find type
-	// likes                         int
+	likes                         bool
 	link_flair_background_color string
 	link_flair_css_class        string
-	// TODO: find type
-	// link_flair_richtext           string
+	link_flair_richtext           string
 	link_flair_text       string
 	link_flair_text_color string
 	link_flair_type       string
@@ -176,7 +173,7 @@ pub:
 	num_comments   int
 	num_crossposts int
 	num_duplicates int
-	// num_reports                   int  TODO: find type
+	num_reports                   ?int
 	over_18                 bool
 	parent_whitelist_status string
 	permalink               string
