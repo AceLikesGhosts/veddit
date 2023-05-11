@@ -63,7 +63,8 @@ pub:
 	disable_contributor_requests  bool
 	display_name                  string
 	display_name_prefixed         string
-	emojis_custom_size            []int // TODO: maybe comment out cause no subreddits ive tested have this actually
+// TODO: maybe comment out cause no subreddits ive tested have this actually
+	emojis_custom_size            []int
 	emojis_enabled                bool
 	free_form_reports             bool
 	has_menu_widget               bool
@@ -83,7 +84,8 @@ pub:
 	link_flair_position           string
 	mobile_banner_image           string
 	name                          string
-	// notification_level string -> TODO: no subreddits ive tested have this set to a value
+	// TODO: no subreddits ive tested have this set to a value
+	// notification_level string
 	original_content_tag_enabled           bool
 	over_18                                bool
 	prediction_leaderboard_entry_type      string
@@ -106,7 +108,8 @@ pub:
 	submit_text_label                      string
 	subreddit_type                         string
 	subscribers                            int
-	// suggested_comment_sort TODO: find type
+	// TODO: find type
+	// suggested_comment_sort
 	title                       string
 	url                         string
 	user_can_flair_in_sr        bool
@@ -114,7 +117,8 @@ pub:
 	user_flair_css_class        ?string
 	user_flair_enabled_in_sr    bool
 	user_flair_position         ?string
-	// user_flair_richtext [] TODO: find type
+	// TODO: find type
+	// user_flair_richtext []
 	user_flair_template_id  ?string
 	user_flair_text         ?string
 	user_flair_text_color   ?string

@@ -109,7 +109,8 @@ pub:
 	author                        string
 	author_flair_background_color string
 	author_flair_css_class        string
-	// author_flair_richtext         string  TODO: find type
+	// TODO: find type
+	// author_flair_richtext         string
 	author_flair_template_id string
 	author_flair_text        string
 	author_flair_text_color  string
@@ -117,22 +118,27 @@ pub:
 	author_is_blocked        bool
 	author_patreon_flair     bool
 	author_premium           bool
-	// awarders                      map[string]string   TODO: find type
+	// TODO: find type
+	// awarders                      map[string]string
 	banned_at_utc int
 	banned_by     string
 	can_gild      bool
 	can_mod_post  bool
-	// category                      []string  TODO: find type
+	// TODO: find type
+	// category                      []string
 	contest_mode bool
 	created      int
 	created_utc  int
-	// discussion_type               string  TODO: find type
-	// distinguished                 map[string]string   TODO: find type
+	// TODO: find type
+	// discussion_type               string
+	// TODO: find type
+	// distinguished                 map[string]string
 	domain string // what?
 	downs  int
 	edited bool
 	gilded int
-	// gildings                      map[string]string  TODO: find type
+	// TODO: find type
+	// gildings                      map[string]string
 	hidden                 bool
 	hide_score             bool
 	id                     string
@@ -144,21 +150,27 @@ pub:
 	is_robot_indexable     bool
 	is_self                bool
 	is_video               bool
-	// likes                         int  TODO: find type
+	// TODO: find type
+	// likes                         int
 	link_flair_background_color string
 	link_flair_css_class        string
-	// link_flair_richtext           string  TODO: find type
+	// TODO: find type
+	// link_flair_richtext           string
 	link_flair_text       string
 	link_flair_text_color string
 	link_flair_type       string
 	locked                bool
-	// media                         map[string]string   TODO: find type
-	// media_embed                   map[string]string   TODO: find type
-	// media_only                    map[string]string   TODO: find type
+	// TODO: find type
+	// media                         map[string]string
+	// TODO: find type
+	// media_embed                   map[string]string
+	// TODO: find type
+	// media_only                    map[string]string
 	mod_note         string
 	mod_reason_by    string
 	mod_reason_title string
-	// mod_reports                   map[string]string   TODO: find type
+	// TODO: find type
+	// mod_reports                   map[string]string
 	name           string
 	no_follow      bool
 	num_comments   int
@@ -173,11 +185,14 @@ pub:
 	quarantine              bool
 	removal_reason          string
 	removed_by              string
-	// removed_by_category           map[string]string   TODO: find type
+	// TODO: find type
+	// removed_by_category           map[string]string
 	saved bool
 	score int
-	// secure_media                  map[string]string  TODO: find type
-	// secure_media_embed            map[string]string  TODO: find type
+	// TODO: find type
+	// secure_media                  map[string]string
+	// TODO: find type
+	// secure_media_embed            map[string]string
 	selftext                string
 	selftext_html           string
 	send_replies            bool
@@ -199,18 +214,21 @@ pub:
 	ups                     int
 	upvote_ratio            f64
 	url                     string
-	// user_reports                  []string  TODO: find type
+	// TODO: find type
+	// user_reports                  []string
 	view_count       int
 	visited          bool
 	whitelist_status string
-	wls              int // TODO: find what this means??
+	// TODO: find what this means??
+	wls int
 }
 
 struct PostAward {
 pub:
 	award_sub_type string
 	award_type     string
-	// awarding_required_to_grant_benefits int  TODO: find type
+	//  TODO: find type
+	// awarding_required_to_grant_benefits int
 	coin_price              int
 	coin_reward             int
 	count                   int
@@ -236,7 +254,8 @@ pub:
 	sticky_duration_seconds int
 	subreddt_coin_reward    int
 	subreddit_id            string
-	// tiers_by_required_awardings         []string   TODO: find type
+	// TODO: find type
+	// tiers_by_required_awardings         []string
 }
 
 //#endregion
