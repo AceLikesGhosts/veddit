@@ -14,6 +14,7 @@ jobs:
           REF: ${{ github.ref }}
           MIN_WORDS: 1
           MIN_CHARACTERS: 1
-          ADD_LIMIT: 50
-          CLOSE_LIMIT: 50
+          ADD_LIMIT: 0
+          CLOSE_LIMIT: 0
           INCLUDE_PATTERN: "\\.v$"
+          COMMENT_ON_ISSUES: 1
