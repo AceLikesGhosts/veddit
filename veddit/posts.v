@@ -130,7 +130,6 @@ pub:
 	created_utc  int
 	// TODO: find type
 	// discussion_type               string
-	// TODO: find type
 	distinguished                 string
 	domain string // what?
 	downs  int
