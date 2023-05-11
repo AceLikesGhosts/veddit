@@ -15,6 +15,6 @@ jobs:
           LABEL: "todo"
           MIN_WORDS: 1
           MIN_CHARACTERS: 1
-          ADD_LIMIT: 1
-          CLOSE_LIMIT: 1
+          ADD_LIMIT: 50
+          CLOSE_LIMIT: 50
           INCLUDE_PATTERN: "\\.v$"
