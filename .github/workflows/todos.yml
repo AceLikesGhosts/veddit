@@ -1,5 +1,6 @@
 name: TDG
 on: [push, pull_request]
+permissions: read-all|write-all
 jobs:
   build:
     runs-on: ubuntu-latest
