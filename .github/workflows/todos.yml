@@ -18,5 +18,4 @@ jobs:
           MIN_CHARACTERS: 1
           ADD_LIMIT: 1
           CLOSE_LIMIT: 1
-          PROJECT_COLUMN_ID: 824533
           INCLUDE_PATTERN: "\\.v$"
