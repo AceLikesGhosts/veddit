@@ -48,8 +48,6 @@ pub fn generic_posts(url string, name string, sort string, limit int, after stri
 	valid_str('url', url)!
 	valid_str('name', name)!
 	valid_str('sort', sort)!
-	valid_str('after', after)!
-	valid_str('before', before)!
 
 	if limit < 1 {
 		return error('Cannot limit to less than 1 post.')
