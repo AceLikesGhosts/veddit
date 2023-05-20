@@ -216,7 +216,7 @@ pub:
 	link_karma                int
 	modhash                   string
 	name                      string
-	new_modmail_exists        bool // nullable
+	new_modmail_exists        ?bool // nullable
 	num_friends               int
 	over_18                   bool
 	password_set              bool
