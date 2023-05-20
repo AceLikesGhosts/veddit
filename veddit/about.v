@@ -51,39 +51,42 @@ pub:
 	can_assign_link_flair         bool
 	can_assign_user_flair         bool
 	collapse_deleted_comments     bool
-	comment_contribution_settings Subreddit_CommentContributionSettings
-	comment_score_hide_mins       int
-	community_icon                string
-	community_reviewed            bool
-	content_category              string
-	created                       int
-	created_utc                   int
-	description                   string
-	description_html              string
-	disable_contributor_requests  bool
-	display_name                  string
-	display_name_prefixed         string
-// TODO: maybe comment out cause no subreddits ive tested have this actually
-	emojis_custom_size            []int
-	emojis_enabled                bool
-	free_form_reports             bool
-	has_menu_widget               bool
-	header_img                    string
-	header_size                   []int
-	header_title                  string
-	hide_ads                      bool
-	icon_img                      string
-	icon_size                     []int
-	id                            string
-	is_chat_post_feature_enabled  bool
-	is_crosspostable_subreddit    bool
-	is_enrolled_in_new_modmail    bool // nullable
-	key_color                     string
-	lang                          string
-	link_flair_enabled            bool
-	link_flair_position           string
-	mobile_banner_image           string
-	name                          string
+	comment_contribution_settings struct {
+		allowed_media_types []string
+	}
+
+	comment_score_hide_mins      int
+	community_icon               string
+	community_reviewed           bool
+	content_category             string
+	created                      int
+	created_utc                  int
+	description                  string
+	description_html             string
+	disable_contributor_requests bool
+	display_name                 string
+	display_name_prefixed        string
+	// TODO: maybe comment out cause no subreddits ive tested have this actually
+	emojis_custom_size           []int
+	emojis_enabled               bool
+	free_form_reports            bool
+	has_menu_widget              bool
+	header_img                   string
+	header_size                  []int
+	header_title                 string
+	hide_ads                     bool
+	icon_img                     string
+	icon_size                    []int
+	id                           string
+	is_chat_post_feature_enabled bool
+	is_crosspostable_subreddit   bool
+	is_enrolled_in_new_modmail   bool // nullable
+	key_color                    string
+	lang                         string
+	link_flair_enabled           bool
+	link_flair_position          string
+	mobile_banner_image          string
+	name                         string
 	// TODO: no subreddits ive tested have this set to a value
 	// notification_level string
 	original_content_tag_enabled           bool
@@ -135,11 +138,6 @@ pub:
 	whitelist_status        string
 	wiki_enabled            bool
 	wls                     int
-}
-
-struct Subreddit_CommentContributionSettings {
-pub:
-	allowed_media_types []string
 }
 
 [deprecated: 'Please use `about_user`, it is the exact same, just a naming convention change to support `about_subreddit`.']
@@ -260,19 +258,18 @@ pub:
 	mweb_xpromo_interstitial_comments_ios                     bool
 	mweb_xpromo_modal_listing_click_daily_dismissible_android bool
 	mweb_xpromo_modal_listing_click_daily_dismissible_ios     bool
-	mweb_x_promo_revamp_v2                                    ?XpromoRevamp
-	noreferrer_to_noopener                                    bool
-	premium_subscriptions_table                               bool
-	promoted_tend_blanks                                      bool
-	resized_styles_image                                      bool
-	show_amp_link                                             bool
-	show_nps_survey                                           bool
-	use_prefs_account_deployment                              bool
-}
+	mweb_x_promo_revamp_v2                                    struct {
+	pub:
+		experiment_id int
+		owner         string
+		variant       string
+	}
 
-struct XpromoRevamp {
-pub:
-	experiment_id int
-	owner         string
-	variant       string
+	noreferrer_to_noopener       bool
+	premium_subscriptions_table  bool
+	promoted_tend_blanks         bool
+	resized_styles_image         bool
+	show_amp_link                bool
+	show_nps_survey              bool
+	use_prefs_account_deployment bool
 }
